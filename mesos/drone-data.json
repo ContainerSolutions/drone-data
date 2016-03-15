@@ -1,0 +1,19 @@
+{
+  "id": "drone-data",
+  "cpus": 0.2,
+  "mem": 300.0,
+  "instances": 1,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "containersol/drone-data",
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 8081, "hostPort": 0, "protocol": "tcp" }
+      ]
+    }
+  },
+  "uris": [
+    "file:///var/tmp/docker.tar.gz"
+  ]
+}

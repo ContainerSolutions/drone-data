@@ -1,0 +1,23 @@
+{
+  "query" : {
+    "filtered" :{
+      "filter": {
+         "and": [
+           { "term" : { "month" : 12 }},
+           { "range" : {
+              "lat" : {
+                "from" : 47.261589,
+                "to" : 47.494076
+              },
+              "lon" : {
+                "from" : 8.384598,
+                "to" : 8.727921
+              }
+           }},
+           { "term" : {"data_type" : "tmp" }},
+           { "term" : { "height" : 1700 }}
+        ]
+      }
+    }
+  }
+}
